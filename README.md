@@ -2,15 +2,15 @@
 
 ## 组件列表
 
-*[x] Eureka
-*[x] Ribbon
-*[x] Hystrix
-*[x] Feign
-*[x] Zuul
-*[ ] Config
-*[ ] Bus
-*[ ] Stream
-*[ ] Sleuth
+* [x] Eureka
+* [x] Ribbon
+* [x] Hystrix
+* [x] Feign
+* [x] Zuul
+* [ ] Config
+* [ ] Bus
+* [ ] Stream
+* [ ] Sleuth
 
 ## 模块划分
 
@@ -26,13 +26,14 @@
 
 ## 项目启动
 
-1. 配置本地数据库。
+1. 配置本地数据库
+
     执行 user-center/src/main/resources/database.sql 建库建表。修改 db.properties 更改数据库配置
-2. 编译项目。
+2. 编译项目
     
     ```sh
     cd spring-cloud-demo
-     mvn clean install -DskipTests 
+    mvn clean install -DskipTests 
     ```
 3. 启动 eureka-server
     
@@ -46,7 +47,7 @@
     
 4. 启动 user-center
 
-    ```
+    ```sh
     cd spring-cloud-demo/user-center
     # 启动两个节点，演示高可用
     mvn spring-boot:run -Dspring.profiles.active=dev
@@ -57,14 +58,14 @@
     
 5. 启动 portal
  
-    ```
+    ```sh
     cd spring-cloud-demo/portal
     mvn spring-boot:run
     ```   
     访问地址：http://localhost:9000/user/1
 6. 启动 admin
     
-    ```
+    ```sh
     cd spring-cloud-demo/admin
     mvn spring-boot:run
     ```    
@@ -73,7 +74,7 @@
     
 7. 启动 api-gateway
 
-    ```
+    ```sh
     cd spring-cloud-demo/api-gateway
     mvn spring-boot:run
     ```

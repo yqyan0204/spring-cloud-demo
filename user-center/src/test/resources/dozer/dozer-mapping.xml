@@ -3,8 +3,8 @@
           xsi:schemaLocation="http://dozer.sourceforge.net
           http://dozer.sourceforge.net/schema/beanmapping.xsd">
     <mapping date-format="yyyy-MM-dd">
-        <class-a>com.yqyan.springboot.demo.model.User</class-a>
-        <class-b>com.yqyan.springboot.demo.model.Person</class-b>
+        <class-a>com.yqyan.user.center.model.User</class-a>
+        <class-b>com.yqyan.user.center.model.Person</class-b>
         <field>
             <a>gender</a>
             <b>sex</b>

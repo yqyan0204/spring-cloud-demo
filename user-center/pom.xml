@@ -7,7 +7,6 @@
         <groupId>com.yqyan</groupId>
         <artifactId>spring-cloud-demo</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.yqyan</groupId>
     <artifactId>user-center</artifactId>
@@ -70,6 +69,18 @@
             <groupId>net.sf.dozer</groupId>
             <artifactId>dozer-spring</artifactId>
             <version>${dozer.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.yqyan</groupId>
+            <artifactId>user-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.yqyan</groupId>
+            <artifactId>model</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
 
     </dependencies>

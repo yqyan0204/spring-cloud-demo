@@ -12,11 +12,16 @@
     <artifactId>spring-cloud-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-cloud-demo</name>
+    <packaging>pom</packaging>
     <description>Demo project for Spring Cloud</description>
 
     <modules>
         <module>eureka-server</module>
+        <module>model</module>
+        <module>user-api</module>
         <module>user-center</module>
+        <module>admin</module>
+        <module>api-gateway</module>
     </modules>
 
     <properties>

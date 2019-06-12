@@ -17,7 +17,7 @@
         <!-- 为生成的Java模型创建一个toString方法 -->
         <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
 
-        <commentGenerator type="com.yqyan.springboot.demo.utils.CommentGenerator">
+        <commentGenerator type="com.yqyan.user.center.utils.CommentGenerator">
             <property name="suppressAllComments" value="true"/>
             <property name="suppressDate" value="true"/>
             <property name="addRemarkComments" value="true" />
@@ -32,14 +32,14 @@
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
 
-        <javaModelGenerator targetPackage="com.yqyan.springboot.demo.model"
+        <javaModelGenerator targetPackage="com.yqyan.user.center.model"
                             targetProject="src/main/java" />
         
         <sqlMapGenerator targetPackage="mapper"
                          targetProject="src/main/resources"/>
         
         <javaClientGenerator type="XMLMAPPER"
-                             targetPackage="com.yqyan.springboot.demo.dao"
+                             targetPackage="com.yqyan.user.center.dao"
                              targetProject="src/main/java"/>
         
         <table tableName="%">

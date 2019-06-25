@@ -7,8 +7,8 @@
 * [x] Hystrix
 * [x] Feign
 * [x] Zuul
-* [ ] Config
-* [ ] Bus
+* [x] Config
+* [x] Bus
 * [ ] Stream
 * [ ] Sleuth
 
@@ -16,11 +16,14 @@
 
 | 模块 | 使用组件 | 功能 |
 | --- | --- | --- |
-| eureka-server | eureka-server | 服务注册和发现中心 |
-| user-center | eureka-client | 用户中心，提供用户管理功能 |
-| portal | eureka-client, ribbon, hystrix | 门户入口， 调用用户中心服务 |
-| admin | eureka-client, feign | 管理入口，调用用户中心服务 |
-| api-gateway | eureka-client, zuul | API网关 |
+| eureka-server | eureka | 服务注册和发现中心 |
+| user-center | eureka | 用户中心，提供用户管理功能 |
+| portal | eureka, ribbon, hystrix | 门户入口， 调用用户中心服务 |
+| admin | eureka, feign | 管理入口，调用用户中心服务 |
+| api-gateway | eureka, zuul | API网关 |
+| config-server | eureka, config, bus | 配置中心 |
+| config-client | eureka, config, bus | 配置客户端服务 |
+| rabbitmq-hello | bus | 消息队列服务 | 
 | user-api | | 用户服务接口，供feign服务提供者和使用使用 | 
 | model | | 公共java bean |  
 
@@ -83,3 +86,21 @@
     http://localhost:5555/api-gateway/portal/user/1  
     http://localhost:5555/api-gateway/admin/admin/1  
     
+8. 启动 config-server
+
+    ```sh
+    cd spring-cloud-demo/config-server
+    mvn spring-boot:run
+    ```    
+    
+    依赖 git 仓库 https://github.com/yqyan0204/spring-cloud-config-server
+    访问地址: http://localhost:7001/demo/dev
+    
+ 9. 启动 config-client
+ 
+    ```sh
+    cd spring-cloud-demo/config-client
+    mvn spring-boot:run -Dspring.profiles.active=node1
+    mvn spring-boot:run -Dspring.profiles.active=node2
+    ```
+    访问地址： http://localhost:7002/from, http://localhost:7003/from

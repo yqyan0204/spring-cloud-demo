@@ -22,6 +22,9 @@
         <module>user-center</module>
         <module>admin</module>
         <module>api-gateway</module>
+        <module>config-server</module>
+        <module>config-client</module>
+        <module>rabbitmq-hello</module>
     </modules>
 
     <properties>
